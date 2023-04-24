@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/back01">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:id="@+id/backBtn"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:text="Tạo tài khoản"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hintEnabled="false">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_person"
+                    android:id="@+id/nameEt"
+                    android:drawablePadding="20dp"
+                    android:hint="Họ tên"
+                    android:inputType="textPersonName"
+                    android:padding="20dp"
+                    android:layout_margin="5dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hintEnabled="false"
+                android:layout_below="@+id/nameTil"
+                android:layout_margin="5dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_email"
+                    android:id="@+id/emailEt"
+                    android:drawablePadding="20dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="20dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                android:layout_below="@+id/emailTil"
+                android:layout_margin="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:id="@+id/passwordEt"
+                    android:drawablePadding="20dp"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:padding="20dp"
+                    android:layout_margin="5dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirmPasswordTil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                android:layout_below="@+id/passwordTil"
+                android:layout_margin="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:id="@+id/confirmPasswordEt"
+                    android:drawablePadding="20dp"
+                    android:hint="Xác nhận mật khẩu"
+                    android:inputType="textPassword"
+                    android:padding="20dp"
+                    android:layout_margin="5dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirmPasswordTil"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_edittext01"
+                android:text="Đăng kí" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
